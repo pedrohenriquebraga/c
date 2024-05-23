@@ -1,23 +1,32 @@
 #include <stdio.h>
 
-int main() {
+double calcularFatorial(int num)
+{
+  if (num == 1)
+  {
+    return 1;
+  }
+  else
+  {
+    return num * calcularFatorial(num - 1);
+  }
+}
 
-  int numFatorial;
-  int resultado = 1;
+int main()
+{
+
+  int num;
 
   printf("Escolha um numero: ");
-  scanf("%d", &numFatorial);
+  scanf("%d", &num);
 
-  if (numFatorial == 0) {
+  if (num == 0)
+  {
     printf("O fatorial do numero 0 e 1");
     return 0;
-  } 
-
-  for (int i = 1; i <= numFatorial; i++) {
-    resultado = resultado * i;
   }
 
-  printf("O fatorial do numero %d e %d", numFatorial, resultado);
+  printf("O fatorial do numero %d e %.0f", num, calcularFatorial(num));
 
   return 0;
 }
