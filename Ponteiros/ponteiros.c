@@ -3,7 +3,7 @@
 int main() {
 
   int num = 5;
-  int * ptr;
+  int *ptr;
 
   // Armazenando endereço da váriavel num no ponteiro ptr
   ptr = &num;
